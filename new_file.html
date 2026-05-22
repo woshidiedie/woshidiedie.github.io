@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系方式</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #e6f0ff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: "Microsoft YaHei", sans-serif;
+            color: #333;
+            gap: 25px;
+        }
+        .logo-img{
+            width: 240px;
+            height: 100px;
+            object-fit: contain;
+        }
+        .qq-box {
+            font-size: 20px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .copy-btn {
+            padding: 4px 12px;
+            border: none;
+            background: #4080ff;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .copy-btn:active {
+            background: #2962cc;
+        }
+        .line2 {
+            font-size: 18px;
+            color: #555;
+        }
+        .name {
+            font-size: 22px;
+            font-weight: 600;
+            color: #224488;
+        }
+    </style>
+</head>
+<body>
+    <!-- 图片放入image文件夹，替换文件名即可 -->
+    <img src="image/logo.png" class="logo-img" alt="logo">
+
+    <div class="qq-box">
+        联系客服qq：3187787845
+        <button class="copy-btn" onclick="copyQQ()">复制QQ</button>
+    </div>
+    <div class="line2">在线时间：11:00~24:00</div>
+    <div class="name">-皇豪体育-</div>
+
+    <script>
+        function copyQQ(){
+            const qqNum = "3187787845";
+            navigator.clipboard.writeText(qqNum).then(()=>{
+                alert("QQ号复制成功");
+            })
+        }
+    </script>
+</body>
+</html>
